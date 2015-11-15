@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/butterflychase.css">
+
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+
+        <script type="text/javascript" data-main="appscripts/butterflychase.js" src="jslibs/require.js">
+        </script>
+    </head>
+
+    <body>
+
+        <audio id="tiptoe" src="resources/On Tiptoe.wav"></audio>
+        <br>
+         <center><img src="css/header.png"><center><br>
+
+            <div id="space"> 
+
+                <left><img id="clickspace"><left>
+
+                <div class="tiles">
+
+                <audio id="a1" src="resources/1.wav"></audio>
+                <audio id="a2" src="resources/2.wav"></audio>
+                <audio id="a3" src="resources/3.wav"></audio>
+                <audio id="a4" src="resources/4.wav"></audio>
+
+                </div>
+
+                 <div id="gamespace">
+                    <br><br>
+                    <img class="islands" id="i1" src="css/1.png"><img class="islands" id="i2" src="css/2.png">
+                    <img class="islands" id="i4" src="css/4.png"><img class="islands" id="i3" src="css/3.png">
+                 </div><br>
+                 <div id="instructions">
+                    <br>
+                    <center><img src="css/instructions.png"><center>
+
+                        <div id="text">Oops! Toothless has become distracted by a butterfly. Typical. <br><br>
+                        Each section lights up when the butterfly flies into it. Help Toothless chase it down by repeating the sequence of the butterfly trail in the order shown. Each round gets more complicated though! Make it through 8 rounds and you win, good luck!</div>
+
+                        <br>
+
+                        <p id="gameround">Round: 0</p> <br>
+
+                        <input id="theButton" type="button" value="Start!">
+
+
+
+                 </div>
+
+            </div>
+
+
+    </body>
+</html>
+

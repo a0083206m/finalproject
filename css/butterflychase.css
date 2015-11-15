@@ -1,0 +1,164 @@
+html, body
+{
+
+	background-color: #f3f3f3;
+	height: 98%;
+	width: 98%;
+}
+
+@font-face {
+  font-family: 'SUNN';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SUNN'), url('www/fonts/SUNN.otf') format('opentype');
+}
+
+h4 {color:black;
+	font-size: 65px;
+	user-select: none;
+	text-align: center;
+	font-family: 'SUNN';
+	margin: auto;
+}
+
+h5 {
+
+	font-size: 50px;
+	margin-top: 20px;
+	font-family: 'SUNN';
+	margin-bottom: 15px;
+}
+
+
+#space {
+	width: 1000px;
+	height: 680px;
+	margin: auto;
+	background-color: #f3f3f3;
+	background-opacity: 0;
+	border-width: 1px;
+	border-color: black;
+	z-index: 0;
+
+}
+
+#clickspace {
+	width: 700px;
+	height:1000px;
+	background: #f3f3f3;
+	opacity: 0;
+	bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    border: none
+}
+
+
+
+#instructions {
+	width: 400px;
+	height: 500px;
+	border-width: 5px;
+	border-color: black;
+	background-color: #c8c8c8;
+	z-index: 5;
+	float: right;
+	font: 'helvetica';
+}
+
+#gamespace {
+	width: 600px;
+	height: 680px;
+	margin: 0 auto;
+	background-color: #f3f3f3;
+	z-index:5;
+	float:left;
+
+
+
+}
+
+#gameround {
+	font-family: 'helvetica' bold;
+	font-size: 25px;
+}
+
+#text {
+	margin: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: 'helvetica';
+}
+
+#theButton{
+    background-color: #393939;
+	border-bottom: 5px solid black;
+    text-align: center;
+    padding: 10px 40px;
+  	margin: 0px 10px 10px 0px;
+  	float: center;
+	border-radius: 20px;
+	font-family: 'helvetica';
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;
+	outline:0;
+	z-index: 120
+    }
+
+#countdowntimer {
+	text-align: left;
+	font-family: 'SUNN';
+	font-size: 50px;
+	color: white;
+	position:absolute;
+	z-index: 5;
+	top: 24.5%;
+	left: 65%;
+}
+
+#clickcount {
+	text-align: right;
+	font-family: 'SUNN';
+	font-size: 50px;
+	color: white;
+	position:absolute;
+	z-index: 6;
+	top: 24.5%;
+	left: 29%;
+}
+
+
+.islands {
+	margin: 0;
+    cursor:url("toothless.png"), auto;
+}
+
+#i2{
+	top: 1px;
+	position: relative;
+}
+
+#i3 {
+
+	top: -5px;
+	position: relative;
+}
+
+#i4{
+	top: -7px;
+	position: relative;
+}
+
+#i1{
+	left: 1px;
+	position: relative;
+}
+}
+
+
+
+

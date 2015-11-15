@@ -1,0 +1,26 @@
+html, body {
+	height:100%;
+	width:100%;
+}
+
+body {
+   font: 24px Helvetica;
+  background-color:white;
+
+  }
+
+
+  #main {
+   
+   display:  flex;
+   width: 1000px;
+   height: 680px;
+   }
+
+   #picture1 {
+    width: 100%;
+   }
+
+  
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/credits.css">
+    </head>
+
+  <body>
+
+    <center><div id='main'>
+
+        
+        <a href="index.html"><img id= "image" src="css/creditsbg.png"></a>
+
+
+        </div><center>
+
+
+
+
+    </div><center>
+
+    <left>div id='normal text'>
+    	<br><br><br><br>
+
+    	<h1> Write Up (Normal Text) </h1> <br><br>
+
+    	<div id='text'>I designed an interactive story in the form of a webcomic, with an integrated simple colour matching game in the story. I chose this because I wanted to give a story and context to the game, and I thought it would be interesting for the game outcome to have different consequences  and thus affecting the story (i.e. different endings depending on victory or failure). <br><br>
+
+For each page I made each panel listen out for user clicks, so that the user gets navigated to the next panel webpage every time a panel is clicked. To enhance interactivity and user exploration, I gave the user three choices to progress with the story, making them change their image source every time there was a mouseover over each of them to animate them. Each choice navigated to a different webpage and a different aspect of the story, but I made it so that the user would be guided to the incorporated game no matter what the choice. <br><br>
+
+I designed a simple colour matching game in which players have to repeat the sequence in which the coloured quadrants light up for 8 rounds, with each rounding lengthening the sequence by one. Players would then have to remember the sequence and reenact it by clicking the quadrants successively in the right order before proceeding to the next round. I chose this because I thought it was quite a simple and elegant way of utilising arrays, as well as to fully implement most of the skills and concepts that I have learnt throughout the class such as the use of conditionals, timers, functions and events. I also placed audio music for some of the panels, the game background music to give a light feel, as well as when the quadrants light up as user feedback. <br><br>
+
+I got inspiration and basic game logic for this game from a Simon Says game in http://codeplanet.io/ that used arrays in JQuery in order to create a random light up sequence, as well as to store the player input sequence and thus compare them to see if they match. I first laid out all the graphics, including the quadrants and text, as well as the layout, styling it using a css file. I made the quadrants div float left so that the instructions div would be positioned right next to the quadrants div. I also made use of input elements by placing a start button that I took from a previous assignment. The concept of modularity was used by putting the HTML, css and javascript files accordingly into respective folders for easy organisation and reference. <br><br>
+
+Using the Document Object Model (DOM), I retrieved the HTML elements like the quadrants, the audio files, the start button and the round text to the javascript  file according to their assigned ids in the HTML file. I also created two empty arrays to hold the example sequence and the player sequence, where the numbers 1-4 corresponding to the four islands, would be added in them. <br><br>
+
+I then created functions for each of the four quadrants that lights the quadrant every time the function is called. In each of the function (p1 to p4), I played the corresponding audio file, and animated the quadrant to light up by changing the image to an image with a butterfly on it. I also styled the image in Javascript rather than in CSS using the element.style.opacity syntax to lower the opacity of the image, giving the illusion of the quadrant lighting up. I then used a timer, namely setTimeout, to return the image and opacity to the original settings after 250ms. I wanted the quadrants to light up one after another as well, so I used the setInterval timer to animate one quadrant every 500ms regularly.<br><br>
+
+I wanted to prevent players from clicking the quadrants at times, so I created a transparent overlay on top of everything, and made it visible by styling it to take any clicks whenever I wanted to disable the game board, and made it invisible whenever I wanted the game board activated. <br><br>
+
+I placed an event listener on the start button as well, which would initialise the startGame function when it is clicked. The startGame function activates the quadrants event listeners, deactivates the game board when the example sequence is playing, empties both arrays, hides the start button, and plays the newRound function. The newRound function in turn adds 1 to the current round count, and then changes the inner HTML text of the round to reflect the current round. The function randomNumber is then called to generate a random number f rom 1 to 4, and the number is then pushed into the game sequence array. This function makes use of Math.random to generate random floored numbers within the range 1-4. The function animate then takes the sequence array numbers as an argument, and lights up the corresponding quadrants. After the sequence is played, the game board is activated in order to listen for the player input. <br><br>
+
+I wanted the quadrants to light up not only when the example sequences were playing, but when the player clicked on them, Thus, I added event listeners to each of the quadrants, thus calling the function that lights up the corresponding quadrant. When the click event occurs, the quadrants corresponding number gets pushed into the player sequence array to record the player response. A function checkLose is also called to check if the player has played the correct sequence. This function made use of the conditionals if and else, and logical operators like ==, === and >=, where if both arrays have the same length, the function calls another function that constructs strings using toString from the array numbers, and then compares the strings to check if they match. If it matches, a new round starts, if not, the player gets a confirmation window telling him that he has lost, before navigating him to another webpage using window.location.href (continuing down the lose ending). I also wrote an event listener so that the cursor would change to an image of Toothless whenever it moused over any of the quadrants, giving the illusion of Toothless flying over them. <br><br>
+
+Whenever a new round starts and the newRound function gets called, it checks if round 8 has been reached by checking the value of i (i adds 1 every time a new round starts). I wrote it so that when i is more than or equals to 9, a confirm message pops up telling the player that he has won the game, before navigating to the next webpage to continue the story (the victory ending). <br><br>
+
+I got my background music for the starting panel, the game, and the ending panels for the two endings from www.purple-planet.com, and the various sound effects in the panels from  https://www.freesound.org. For audio, I appended them into the HTML files, and called them using the DOM method into Javascript to control when they played. In retrospect, I should have compiled all my story panels into one HTML file using a slideshow to switch between image panels so that the background music could be played throughout the story so as to enhance the user experience. The Toothless image was gotten from www.redbubble.com, and the credits background was from http://www.wallconvert.com/. The other graphics were all hand drawn and rendered by me. <br><br>
+
+I hope you have enjoyed playing through this project! :) <br><br><br><br>
+
+Created by: Debbie Yeo<br>
+National University of Singapore <br>
+Faculty of Arts and Social Sciences <br>
+Communications & New Media <br>
+
+<br><br><br><br>
+
+
+</div>
+
+    </div>
+    
+  </body>
+</html>
+
